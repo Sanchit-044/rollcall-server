@@ -11,7 +11,12 @@ const { errorHandler } = require("./middleware/errorHandler");
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+  origin: ["http://localhost:5173", "http://localhost:5174"],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 if (process.env.NODE_ENV !== "test") {
   app.use(morgan("dev"));
