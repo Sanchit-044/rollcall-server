@@ -12,7 +12,7 @@ const { errorHandler } = require("./middleware/errorHandler");
 const app = express();
 
 const corsOptions = {
-  origin: ["http://localhost:5173", "http://localhost:5174"],
+  origin: ["https://rollcall-front.onrender.com", "http://localhost:5173", "http://localhost:5174"],
   credentials: true,
 };
 
